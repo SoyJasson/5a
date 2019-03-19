@@ -1,0 +1,133 @@
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  min-height: 100%;
+  height:auto;
+}
+
+#Home {background-color: #E74C3C;}
+#News {background-color: #27AE60;}
+#Contact {background-color: #2980B9;}
+#About {background-color: #E67E22;}
+
+/* Comienzo tablas */
+
+table.eventos{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+  color:black;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+ .eventos td, .eventos th{
+	padding: 20px;
+  border-bottom: solid 1px #ddd;
+}
+
+.eventos thead{
+	background-color: #1E8449;
+	border-bottom: solid 5px #145A32;
+	color: white;
+}
+.eventos tr:hover td{
+	background-color: #979A9A;
+	color: white;
+}
+
+iframe{
+  width:100%;
+  height:1700px;  
+}
+
+ @media screen and (max-width: 800px) {
+    
+    /* Desaparecer el header */
+      table.eventos thead, .eventos th {
+         border: none;
+         clip: rect(0, 0, 0, 0);
+         height: 1px;
+         margin: -1px;
+         overflow: hidden;
+         padding: 0;
+         position: absolute;
+         width: 1px;
+      }
+
+   .eventos {
+   width:50%;
+   }
+  /* Cada celda ocupa todo el ancho 
+   de la tabla */
+   table.eventos tr{
+     border-bottom: 3px solid #27AE60; 
+   }
+ 
+
+   table.eventos td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 1.2em;
+    text-align: right;
+    padding: 10px;
+  }
+  table.eventos td:before{
+    content: attr(data-label);
+    float: left;
+    color: #273b47;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 1px 5px;
+  }
+}
+
+
+.hora{
+  overflow:auto;
+}
+
+.hora table {
+	width: 100%;
+	border-collapse: collapse;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.hora th, .hora td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+}
+
+.hora td:hover {
+			background-color: rgba(255,255,255,0.3);
+		}
+.recreo {
+background-color: #006bb2;
+}
